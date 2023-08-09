@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import { Mobile, Pc } from './hooks/responsive';
+import { Route, Routes } from 'react-router-dom';
+import M_HOME from './mobile_pages/M_HOME';
+import P_HOME from './pc_pages/P_HOME';
+import M_INFO from './mobile_pages/M_INFO';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Mobile>
+        <Routes>
+          <Route path='/' element={<M_HOME />} />
+          <Route path='/info' element={<M_INFO />} />
+        </Routes>
+      </Mobile>
+
+      <Pc>
+        <Routes>
+          <Route path='/' element={<P_HOME />} />
+        </Routes>
+      </Pc>
     </div>
   );
 }
