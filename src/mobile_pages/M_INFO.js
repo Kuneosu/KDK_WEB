@@ -9,6 +9,10 @@ const M_INFO = () => {
             <GAME_CARD />
             <GAME_CARD />
             <GAME_CARD />
+            <GAME_CARD />
+            <GAME_CARD />
+            <GAME_CARD />
+            <GAME_CARD />
         </div>
     );
 };
